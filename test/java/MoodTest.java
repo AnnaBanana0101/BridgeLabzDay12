@@ -9,18 +9,18 @@ public class MoodTest {
 
     
     MoodAnalyzer moodAnalyzer;
-    @BeforeEach
-    public void initialize()
-    {
-        moodAnalyzer = new MoodAnalyzer();
-    }
+    // @BeforeEach
+    // public void initialize()
+    // {
+    //     moodAnalyzer = new MoodAnalyzer();
+    // }
 
     @Test
     public void moodSad()
     {
         String message = "I am in a sad mood";
-
-        String result = moodAnalyzer.analyzeMood(message);
+        moodAnalyzer = new MoodAnalyzer(message);
+        String result = moodAnalyzer.analyzeMood();
 
         assertEquals("SAD", result);
     }
@@ -30,7 +30,8 @@ public class MoodTest {
     {
         String message = "I am in any mood";
 
-        String result = moodAnalyzer.analyzeMood(message);
+        moodAnalyzer = new MoodAnalyzer(message);
+        String result = moodAnalyzer.analyzeMood();
 
         assertEquals("HAPPY", result);
     }
