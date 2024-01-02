@@ -39,9 +39,7 @@ public class MoodTest {
     @Test
     public void moodNull()
     {
-        String message = "";
-
-        moodAnalyzer = new MoodAnalyzer(message);
+        moodAnalyzer = new MoodAnalyzer();
         String result = moodAnalyzer.analyzeMood();
 
         assertEquals("HAPPY", result);

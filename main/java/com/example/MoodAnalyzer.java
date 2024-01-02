@@ -18,13 +18,20 @@ public class MoodAnalyzer {
     {
         String result = "";
 
-        String formatted_message = this.message.toLowerCase();
-        System.out.println(formatted_message);
+        try {
+            String formatted_message = this.message.toLowerCase();
+            System.out.println(formatted_message);
 
-        if(formatted_message.contains("sad"))
-            result = "SAD";
-        else
+            if(formatted_message.contains("sad"))
+                result = "SAD";
+            else
+                result = "HAPPY";
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e.getMessage());
             result = "HAPPY";
+        }
+        
 
         return result;
     }
