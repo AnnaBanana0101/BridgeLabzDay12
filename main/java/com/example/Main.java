@@ -7,6 +7,5 @@ public class Main {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
         System.out.println(moodAnalyzer.analyzeMood());
         
-
     }
 }

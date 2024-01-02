@@ -29,7 +29,6 @@ public class MoodAnalyzer {
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getMessage());
-            result = "HAPPY";
         }
         
 
